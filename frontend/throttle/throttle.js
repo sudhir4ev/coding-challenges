@@ -7,10 +7,9 @@ export default function throttle(func, wait) {
   let timerId;
 
   return function (...args) {
-    const self = this;
     
     if (!timerId) {
-      const res = func.apply(self, args)
+      const res = func.apply(this, args)
       timerId = setTimeout(() => {
         timerId = null
       }, wait)
