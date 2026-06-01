@@ -1,4 +1,4 @@
-const { processRequests } = require('./solution');
+import { processRequests } from './solution.js';
 
 describe('processRequests - Blacklisted IPs', () => {
   describe('regex matching', () => {

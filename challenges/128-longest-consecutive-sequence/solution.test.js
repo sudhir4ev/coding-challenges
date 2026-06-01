@@ -1,4 +1,4 @@
-const { longestConsecutive } = require('./solution');
+import { longestConsecutive } from './solution.js';
 
 describe('longestConsecutive', () => {
   it('returns 4 for the basic unsorted example', () => {

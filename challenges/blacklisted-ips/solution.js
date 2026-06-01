@@ -9,7 +9,7 @@
  * @param {string[]} requests - Array of IP addresses (format: "a.b.c.d")
  * @returns {number[]} - Array of 1 (blocked) or 0 (not blocked) for each request
  */
-function processRequests(blacklisted_ips, requests) {
+export function processRequests(blacklisted_ips, requests) {
   // TODO: Implement solution
    const blacklistedRequests = requests.map(request => {
     for (const blacklisted_ip of blacklisted_ips) {
@@ -32,4 +32,3 @@ function isIpAddressMatching(ip, pattern) {
   return ip.match(ipRegex);
 }
 
-module.exports = { processRequests };

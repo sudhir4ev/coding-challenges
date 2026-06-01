@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-function longestConsecutive(nums) {
+export function longestConsecutive(nums) {
   if (nums.length === 0) return 0;
   // 1. Sort numbers
   nums.sort((a, b) => a - b);
@@ -22,5 +22,3 @@ function longestConsecutive(nums) {
   
   return maxLen;
 }
-
-module.exports = { longestConsecutive };

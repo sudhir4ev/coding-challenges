@@ -1,4 +1,4 @@
-const { twoSum } = require('./solution');
+import { twoSum } from './solution.js';
 
 describe('twoSum', () => {
   it('returns indices that sum to target', () => {
