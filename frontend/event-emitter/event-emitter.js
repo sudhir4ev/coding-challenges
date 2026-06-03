@@ -3,9 +3,7 @@
 // default export has the same interface.
 
 export default class EventEmitter {
-  constructor() {
-    throw 'Not implemented!';
-  }
+  listeners = Object.create(null);
 
   /**
    * @param {string} eventName
@@ -13,7 +11,11 @@ export default class EventEmitter {
    * @returns {EventEmitter}
    */
   on(eventName, listener) {
-    throw 'Not implemented!';
+    this.listeners[eventName] = this.listeners[eventName] || {
+      handlers: [],
+    };
+    this.listeners[eventName].handlers.push(listener);
+    return this;
   }
 
   /**
@@ -22,7 +24,25 @@ export default class EventEmitter {
    * @returns {EventEmitter}
    */
   off(eventName, listener) {
-    throw 'Not implemented!';
+    const eventListeners = this.listeners[eventName];
+    if (!eventListeners || eventListeners.handlers.length == 0) return this;
+
+    let { handlers } = eventListeners;
+    const index = handlers.indexOf(listener);
+
+    if (index >= 0) {
+      const newHandlers = [
+        ...handlers.slice(0, index),
+        ...handlers.slice(index + 1),
+      ];
+      eventListeners.handlers = newHandlers;
+    }
+
+    if (eventListeners.handlers.length == 0) {
+      delete this.listeners[eventName];
+    }
+
+    return this;
   }
 
   /**
@@ -31,6 +51,13 @@ export default class EventEmitter {
    * @returns {boolean}
    */
   emit(eventName, ...args) {
-    throw 'Not implemented!';
+    const eventListeners = this.listeners[eventName];
+    if (!eventListeners || eventListeners.handlers.length == 0) return false;
+
+    const { handlers } = eventListeners;
+    handlers.forEach((listener) => {
+      listener.apply(this, args);
+    });
+    return true;
   }
 }
