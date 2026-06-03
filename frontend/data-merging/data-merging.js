@@ -20,8 +20,6 @@ export default function mergeData(sessions) {
     return userSessions;
   }, {});
 
-  console.log(Object.values(userSessionMap));
-
   return Object.values(userSessionMap)
     .sort((a, b) => a.index - b.index)
     .map(({ user, duration, equipmentSet }) => ({
