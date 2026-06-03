@@ -1,4 +1,4 @@
-import { processRequests } from './solution.js';
+import { processRequests } from './blacklisted-ips.js';
 
 describe('processRequests - Blacklisted IPs', () => {
   describe('regex matching', () => {
@@ -68,11 +68,15 @@ describe('processRequests - Blacklisted IPs', () => {
       const requests = [
         '1.2.3.4', // t=0, unblocked
         '1.2.3.4', // t=1, unblocked
-        '1.2.3.4', // t=6, unblocked (outside 5s window)
-        '1.2.3.4', // t=7, unblocked (2nd in new window)
-        '1.2.3.4', // t=8, blocked (3rd, 2 unblocked in last 5s)
+        '1.2.3.4', // t=2, blocked
+        '1.2.3.4', // t=3, blocked
+        '1.2.3.4', // t=4, blocked
+        '1.2.3.4', // t=5, unblocked (outside 5s window)
+        '1.2.3.4', // t=6, unblocked (2nd in new window)
+        '1.2.3.4', // t=7, blocked (3rd, 2 unblocked in last 5s)
+        '1.2.3.4', // t=8, blocked 
       ];
-      expect(processRequests(blacklisted, requests)).toEqual([0, 0, 0, 0, 1]);
+      expect(processRequests(blacklisted, requests)).toEqual([0, 0, 1, 1, 1, 0, 0, 1, 1]);
     });
 
     it('handles rate limiting with multiple IPs', () => {
