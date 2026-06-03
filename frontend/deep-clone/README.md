@@ -31,7 +31,7 @@ console.log(copy.user.tags); // ['admin', 'owner']
 
 If you need to clone any of those, or you need full control over what gets shared versus copied, you'll write your own deepClone. Implementing it from scratch is also one of the most common JavaScript interview questions, because it tests recursion, type detection, and Object traversal in a small surface area.
 
-> Looking for the conceptual explanation of "shallow vs deep copy"? See the dedicated quiz page: Explain the difference between shallow copy and deep copy.
+> "Looking for the conceptual explanation of "shallow vs deep copy"? See the dedicated quiz page: [Explain the difference between shallow copy and deep copy](https://www.greatfrontend.com/questions/quiz/explain-the-difference-between-shallow-copy-and-deep-copy)."
 
 Implement `deepClone(value)` so it returns a deep copy of a JSON-serializable value. The input may be `null`, `booleans`, `numbers`, `strings`, `arrays`, or plain objects. It will not contain cycles or special objects like `Date`, `RegExp`, `Map`, or `Set`. Primitive values can be returned as-is.
 
