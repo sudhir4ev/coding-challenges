@@ -1,47 +1,50 @@
 /**
- * @param {any} val
- * @param {Array<string>} keys
- * @returns any
+ * @param {Object} obj
+ * @return {Object}
  */
-export default function deepOmit(val, keys) {
-  if (!keys) return val;
+export default function squashObject(obj) {
+  let resultObj = {};
 
-  if (Array.isArray(val)) {
-    return val.map((item) => {
-      if (item == null || isLiteral(item)) {
-        return item;
-      }
-      if (Array.isArray(item) || typeof item == "object") {
-        return deepOmit(item, keys);
-      }
-    });
-  }
+  Object.entries(obj).forEach(([key, val]) => {
+    if (!hasChildren(val)) {
+      resultObj[key] = val;
+      return;
+    }
 
-  if (!isLiteral(val) && val != null) {
-    const result = {};
-    Object.entries(val).forEach(([key, childVal]) => {
-      if (keys.includes(key)) return;
+    const childObjects = {};
 
-      const isNull = childVal == null;
-      if (isNull) {
-        result[key] = childVal;
-      }
+    if (Array.isArray(val)) {
+      val.forEach((childItem, index) => {
+        childObjects[getKey(`${index}`, key)] = childItem;
+      });
+    } else {
+      Object.entries(val).forEach(([childKey, childVal]) => {
+        childObjects[getKey(childKey, key)] = childVal;
+      });
+    }
 
-      const hasChildren = !isLiteral(childVal) || Array.isArray(childVal);
+    resultObj = {
+      ...resultObj,
+      ...squashObject(childObjects),
+    };
+  });
 
-      if (hasChildren) {
-        result[key] = deepOmit(childVal, keys);
-        return;
-      }
-
-      result[key] = childVal;
-    });
-    return result;
-  }
+  return resultObj;
 }
 
-function isLiteral(val) {
-  return ["string", "boolean", "number", "symbol", "function"].includes(
-    typeof val,
-  );
+function hasChildren(val) {
+  if (
+    ["string", "boolean", "number", "symbol", "function"].includes(typeof val)
+  ) {
+    return false;
+  }
+  if (Array.isArray(val)) return true;
+
+  if (val == null) return false;
+
+  return typeof val == "object";
+}
+
+function getKey(key, ...parentKeys) {
+  return [...parentKeys, key].filter(Boolean).join(".");
 }
