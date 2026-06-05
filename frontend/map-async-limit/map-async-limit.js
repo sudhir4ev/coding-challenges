@@ -9,8 +9,6 @@ export default async function mapAsyncLimit(iterable, callbackFn, size) {
   const batches = size ? _makeBatches(iterable, size) : [iterable];
   let results = [];
 
-  console.log(iterable, batches);
-
   for (const batch of batches) {
     const batchResults = await Promise.all(
       batch.map((arg) => callbackFn.apply(this, [arg])),
@@ -18,7 +16,6 @@ export default async function mapAsyncLimit(iterable, callbackFn, size) {
     results = [...results, ...batchResults];
   }
 
-  console.log(results);
   return results;
 }
 

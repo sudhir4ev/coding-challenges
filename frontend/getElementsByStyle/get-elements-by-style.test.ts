@@ -1,3 +1,4 @@
+/** @jest-environment jsdom */
 import getElementsByStyle from './get-elements-by-style';
 
 function checkResults(

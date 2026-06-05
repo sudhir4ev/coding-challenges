@@ -1,6 +1,6 @@
 import mapAsyncLimit from './map-async-limit';
 
-const asyncIdentity = (x: number) => Promise.resolve(x);
+const asyncIdentity = (x: unknown) => Promise.resolve(x);
 const asyncDouble = (x: number) =>
   new Promise((resolve) => {
     setTimeout(() => {

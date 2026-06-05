@@ -1,7 +1,6 @@
 import maxSumSubArray from './array-maximum-sum-contiguous';
 import submitTestCases from './test.json';
 
-console.log(submitTestCases)
 
 describe('maxSumSubArray', () => {
   (submitTestCases as any[]).forEach((example: any) => {
