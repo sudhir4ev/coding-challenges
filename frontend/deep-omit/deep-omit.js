@@ -1,50 +1,47 @@
 /**
- * @param {Object} obj
- * @return {Object}
+ * @param {any} val
+ * @param {Array<string>} keys
+ * @returns any
  */
-export default function squashObject(obj) {
-  let resultObj = {};
+export default function deepOmit(val, keys) {
+  if (!keys) return val;
 
-  Object.entries(obj).forEach(([key, val]) => {
-    if (!hasChildren(val)) {
-      resultObj[key] = val;
-      return;
-    }
-
-    const childObjects = {};
-
-    if (Array.isArray(val)) {
-      val.forEach((childItem, index) => {
-        childObjects[getKey(`${index}`, key)] = childItem;
-      });
-    } else {
-      Object.entries(val).forEach(([childKey, childVal]) => {
-        childObjects[getKey(childKey, key)] = childVal;
-      });
-    }
-
-    resultObj = {
-      ...resultObj,
-      ...squashObject(childObjects),
-    };
-  });
-
-  return resultObj;
-}
-
-function hasChildren(val) {
-  if (
-    ["string", "boolean", "number", "symbol", "function"].includes(typeof val)
-  ) {
-    return false;
+  if (Array.isArray(val)) {
+    return val.map((item) => {
+      if (item == null || isLiteral(item)) {
+        return item;
+      }
+      if (Array.isArray(item) || typeof item == "object") {
+        return deepOmit(item, keys);
+      }
+    });
   }
-  if (Array.isArray(val)) return true;
 
-  if (val == null) return false;
+  if (!isLiteral(val) && val != null) {
+    const result = {};
+    Object.entries(val).forEach(([key, childVal]) => {
+      if (keys.includes(key)) return;
 
-  return typeof val == "object";
+      const isNull = childVal == null;
+      if (isNull) {
+        result[key] = childVal;
+      }
+
+      const hasChildren = !isLiteral(childVal) || Array.isArray(childVal);
+
+      if (hasChildren) {
+        result[key] = deepOmit(childVal, keys);
+        return;
+      }
+
+      result[key] = childVal;
+    });
+    return result;
+  }
 }
 
-function getKey(key, ...parentKeys) {
-  return [...parentKeys, key].filter(Boolean).join(".");
+function isLiteral(val) {
+  return ["string", "boolean", "number", "symbol", "function"].includes(
+    typeof val,
+  );
 }

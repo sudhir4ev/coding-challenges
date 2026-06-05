@@ -1,142 +1,198 @@
-import squashObject from './squash-object';
+import deepOmit from './deep-omit';
 
-describe('squashObject', () => {
-  test('empty', () => {
-    expect(squashObject({})).toEqual({});
+const data = {
+  a: 1,
+  b: 2,
+  c: {
+    d: 3,
+    e: 4,
+  },
+  f: [5, 6],
+};
+
+describe('deepOmit', () => {
+  test('empty object', () => {
+    expect(deepOmit({}, [])).toEqual({});
   });
 
-  test('no nesting', () => {
-    expect(squashObject({ a: '1', b: 'b' })).toEqual({ a: '1', b: 'b' });
+  test('empty keys', () => {
+    const data = {
+      a: 1,
+      b: 2,
+      c: {
+        d: 3,
+        e: 4,
+      },
+      f: [5, 6],
+    };
+    const result = deepOmit(data, []);
+    expect(result).toEqual(data);
   });
 
-  test('one level of nesting', () => {
-    expect(
-      squashObject({
-        a: 5,
-        c: {
-          f: 9,
+  describe('non-nested object', () => {
+    test('single key', () => {
+      const keysToOmit = ['b'];
+      const result = deepOmit(
+        {
+          a: 1,
+          b: 2,
+          c: 3,
         },
-      }),
-    ).toEqual({ a: 5, 'c.f': 9 });
-  });
-
-  test('multiple levels of nesting', () => {
-    expect(
-      squashObject({
-        a: 5,
-        b: 6,
-        c: {
-          f: 9,
-          g: {
-            m: 17,
-            n: 3,
-          },
-        },
-      }),
-    ).toEqual({ a: 5, b: 6, 'c.f': 9, 'c.g.m': 17, 'c.g.n': 3 });
-  });
-
-  test('arrays', () => {
-    expect(
-      squashObject({
-        a: ['hi', 'bye'],
-      }),
-    ).toEqual({
-      'a.0': 'hi',
-      'a.1': 'bye',
-    });
-  });
-
-  test('null-ish values', () => {
-    expect(
-      squashObject({
-        a: {
-          a: 0,
-          b: null,
-          c: false,
-          d: undefined,
-        },
-      }),
-    ).toEqual({
-      'a.a': 0,
-      'a.b': null,
-      'a.c': false,
-      'a.d': undefined,
-    });
-  });
-
-  describe('empty keys', () => {
-    test('single layer of empty key', () => {
-      expect(
-        squashObject({
-          foo: {
-            '': 0,
-            a: 1,
-          },
-        }),
-      ).toEqual({
-        foo: 0,
-        'foo.a': 1,
+        keysToOmit,
+      );
+      expect(result).toEqual({
+        a: 1,
+        c: 3,
       });
     });
 
-    test('nested empty keys', () => {
-      expect(
-        squashObject({
-          foo: {
-            '': {
-              '': 1,
-              bar: 2,
-            },
-            a: 1,
-          },
-        }),
-      ).toEqual({
-        foo: 1,
-        'foo.bar': 2,
-        'foo.a': 1,
+    test('multiple keys', () => {
+      const keysToOmit = ['b', 'c', 'e'];
+      const result = deepOmit(data, keysToOmit);
+      expect(result).toEqual({
+        a: 1,
+        f: [5, 6],
       });
     });
   });
 
-  test('everything', () => {
-    expect(
-      squashObject({
-        a: 'hi',
-        b: {
-          a: null,
-          b: ['foo', '', null, 'bar'],
-          d: 'hello',
+  describe('nested objects', () => {
+    test('remove from nested objects', () => {
+      const nestedData = {
+        a: 1,
+        b: 2,
+        c: {
+          d: 3,
           e: {
-            a: 'yo',
-            b: undefined,
-            c: 'sup',
-            d: 0,
-            f: [
-              { foo: 123, bar: 123 },
-              { foo: 465, bar: 456 },
-            ],
+            f: 4,
+            g: 5,
           },
         },
-        c: 'world',
-      }),
-    ).toEqual({
-      a: 'hi',
-      'b.a': null,
-      'b.b.0': 'foo',
-      'b.b.1': '',
-      'b.b.2': null,
-      'b.b.3': 'bar',
-      'b.d': 'hello',
-      'b.e.a': 'yo',
-      'b.e.b': undefined,
-      'b.e.c': 'sup',
-      'b.e.d': 0,
-      'b.e.f.0.foo': 123,
-      'b.e.f.0.bar': 123,
-      'b.e.f.1.foo': 465,
-      'b.e.f.1.bar': 456,
-      c: 'world',
+      };
+      const keysToOmit = ['b', 'f'];
+      const result = deepOmit(nestedData, keysToOmit);
+      const expected = {
+        a: 1,
+        c: {
+          d: 3,
+          e: {
+            g: 5,
+          },
+        },
+      };
+      expect(result).toEqual(expected);
+    });
+
+    test('remove entire nested object', () => {
+      const nestedData = {
+        a: 1,
+        b: 2,
+        c: {
+          d: 3,
+          e: {
+            f: 4,
+            g: 5,
+          },
+        },
+      };
+      const keysToOmit = ['e'];
+      const result = deepOmit(nestedData, keysToOmit);
+      const expected = {
+        a: 1,
+        b: 2,
+        c: {
+          d: 3,
+        },
+      };
+      expect(result).toEqual(expected);
+    });
+
+    test('remove all keys from object', () => {
+      const nestedData = {
+        a: 1,
+        b: 2,
+        c: {
+          d: 3,
+          e: {
+            f: 4,
+            g: 5,
+          },
+        },
+      };
+      const keysToOmit = ['d', 'e'];
+      const result = deepOmit(nestedData, keysToOmit);
+      const expected = {
+        a: 1,
+        b: 2,
+        c: {},
+      };
+      expect(result).toEqual(expected);
+    });
+  });
+
+  describe('arrays', () => {
+    test('basic', () => {
+      const dataWithArray = {
+        a: 1,
+        b: [2, 3],
+        c: {
+          d: 4,
+          e: [5, 6],
+        },
+      };
+      const keysToOmit = ['b', 'e'];
+      const result = deepOmit(dataWithArray, keysToOmit);
+      const expected = {
+        a: 1,
+        c: {
+          d: 4,
+        },
+      };
+      expect(result).toEqual(expected);
+    });
+
+    test('objects within arrays', () => {
+      const dataWithArray = {
+        a: 1,
+        b: [{ c: 2 }, 3],
+        c: [{ a: 2, b: 3 }],
+      };
+      const keysToOmit = ['b', 'e'];
+      const result = deepOmit(dataWithArray, keysToOmit);
+      const expected = {
+        a: 1,
+        c: [{ a: 2 }],
+      };
+      expect(result).toEqual(expected);
+    });
+
+    test('arrays within arrays', () => {
+      const dataWithArray = {
+        a: 1,
+        b: [{ c: 2 }, [3]],
+        c: [[{ a: 2, b: 3 }]],
+      };
+      const keysToOmit = ['b', 'e'];
+      const result = deepOmit(dataWithArray, keysToOmit);
+      const expected = {
+        a: 1,
+        c: [[{ a: 2 }]],
+      };
+      expect(result).toEqual(expected);
+    });
+  });
+
+  test('should not mutate the original object', () => {
+    const keysToOmit = ['b', 'c', 'e'];
+    deepOmit(data, keysToOmit);
+    expect(data).toEqual({
+      a: 1,
+      b: 2,
+      c: {
+        d: 3,
+        e: 4,
+      },
+      f: [5, 6],
     });
   });
 });

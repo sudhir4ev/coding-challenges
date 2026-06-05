@@ -28,12 +28,10 @@ export default function deepEqual(valueA, valueB) {
 
     if (entriesA.length !== entriesB.length) return false;
 
-    console.info(valueA, valueB);
-
     for (let i = 0; i < entriesA.length; i++) {
       const [key, valA] = entriesA[i];
       const valB = valueB[key];
-      console.log(valA, valB);
+      
       if (!deepEqual(valA, valB)) return false;
     }
     return true;
