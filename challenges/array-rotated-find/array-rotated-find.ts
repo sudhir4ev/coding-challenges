@@ -13,12 +13,12 @@ export default function findInRotatedArray(numbers: number[], target: number) {
   let start = 0,
     end = numbers.length - 1;
 
-  // console.log(numbers, target);
   while (start < end) {
-    const middle = Math.trunc((start + end) / 2);
-    if (numbers[middle] == target) return middle;
     if (numbers[start] == target) return start;
     if (numbers[end] == target) return end;
+    
+    const middle = Math.trunc((start + end) / 2);
+    if (numbers[middle] == target) return middle;
 
     // left half is sorted
     if (numbers[start] < numbers[middle]) {
