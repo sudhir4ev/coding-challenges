@@ -1,5 +1,12 @@
 import findInRotatedArray from "./array-rotated-find";
+import submitTestCases from "./submit.tests.json";
 
-test("numbers = [-1,2,4,-9,-2] target = 2", () => {
-  expect(findInRotatedArray([-1, 2, 4, -9, -2], 2)).toBe(1);
+describe("findInRotatedArray", () => {
+  (submitTestCases as any[]).forEach((example: any) => {
+    test(`numbers = [${example.input[0][1]}] target = ${example.input[1][1]}`, () => {
+      expect(
+        findInRotatedArray(example.input[0][1], example.input[1][1]),
+      ).toStrictEqual(example.output);
+    });
+  });
 });
