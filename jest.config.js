@@ -8,5 +8,5 @@ export default {
     '^.+\\.tsx?$': ['ts-jest', { useESM: true, diagnostics: false }],
   },
   collectCoverageFrom: ['challenges/**/*.js', '!**/*.test.js'],
-  testPathIgnorePatterns: ["/node_modules/", "/examples"],
+  testPathIgnorePatterns: ["/node_modules/", "/examples", "/ui-react/"],
 };
