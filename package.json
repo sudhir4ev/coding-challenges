@@ -6,6 +6,7 @@
   "scripts": {
     "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
     "test:watch": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watch",
+    "dev:ui:todo": "npm run dev:todo --prefix ui-react",
     "test:ui": "npm run test --prefix ui-react"
   },
   "keywords": [],

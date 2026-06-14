@@ -5,7 +5,8 @@
   "type": "module",
   "workspaces": ["todo"],
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "dev:todo": "npm run dev -w ui-react-todo"
   },
   "dependencies": {
     "react": "^19.1.1",
