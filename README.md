@@ -26,6 +26,42 @@ npm run test --prefix ui-react/todo   # run Vitest
 
 See `ui-react/README.md` for exercise details.
 
+## Challenges
+
+### algo
+
+- [x] [Two Sum](algo/example-two-sum/README.md)
+- [x] [128. Longest Consecutive Sequence](algo/128-longest-consecutive-sequence/README.md)
+- [x] [Blacklisted IPs](algo/blacklisted-ips/README.md)
+- [x] [Maximum Sum in Contiguous Array](algo/array-maximum-sum-contiguous/README.md)
+- [x] [Most Common Elements](algo/array-most-common-elements/README.md)
+- [x] [Array Product Excluding Current](algo/array-product-excluding-current/README.md)
+- [x] [End of Array Reachable](algo/array-reachable-end/README.md)
+- [x] [Find Element in Rotated Array](algo/array-rotated-find/README.md)
+- [ ] [Smallest Element in Rotated Sorted Array](algo/array-smallest-in-rotated/README.md)
+
+### frontend
+
+- [x] [Classnames](frontend/classnames/README.md)
+- [x] [Data Merging](frontend/data-merging/README.md)
+- [x] [Deep Clone](frontend/deep-clone/README.md)
+- [x] [Deep Equal](frontend/deep-equal/README.md)
+- [x] [Deep Omit](frontend/deep-omit/README.md)
+- [x] [Event Emitter](frontend/event-emitter/README.md)
+- [x] [Flatten](frontend/flatten/README.md)
+- [x] [getElementsByStyle](frontend/getElementsByStyle/README.md)
+- [x] [Map Async Limit](frontend/map-async-limit/README.md)
+- [x] [Memoize](frontend/memoize/README.md)
+- [x] [Promise.all](frontend/promise-all/README.md)
+- [x] [Promise.any](frontend/promise-any/README.md)
+- [x] [Promisify](frontend/promisify/README.md)
+- [x] [Squash Object](frontend/squash-object/)
+- [x] [Throttle](frontend/throttle/README.md)
+
+### ui-react
+
+- [ ] [Todo App](ui-react/README.md)
+
 ## Adding a challenge
 
 1. Create a folder under `challenges/`, e.g. `challenges/your-challenge-name/`
