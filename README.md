@@ -38,7 +38,9 @@ See `ui-react/README.md` for exercise details.
 - [x] [Array Product Excluding Current](algo/array-product-excluding-current/README.md)
 - [x] [End of Array Reachable](algo/array-reachable-end/README.md)
 - [x] [Find Element in Rotated Array](algo/array-rotated-find/README.md)
-- [ ] [Smallest Element in Rotated Sorted Array](algo/array-smallest-in-rotated/README.md)
+- [x] [Smallest Element in Rotated Sorted Array](algo/array-smallest-in-rotated/README.md)
+- [ ] [Binary Search Tree Kth Smallest Element](algo/binary-search-tree-kth-smallest/README.md)
+
 
 ### frontend
 
