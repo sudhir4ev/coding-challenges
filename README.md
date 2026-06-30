@@ -42,6 +42,12 @@ See `ui-react/README.md` for exercise details.
 - [⚠️] [Array Product Excluding Current](algo/array-product-excluding-current/README.md) — **constraint violated**: division is prohibited; solution uses division
 - [ ] [Binary Search Tree Lowest Common Ancestor](algo/binary-search-tree-lowest-common-ancestor/README.md) — scaffolded, not yet attempted
 - [ ] [Validate Binary Search Tree](algo/binary-search-tree-validate/README.md) — scaffolded, not yet attempted
+- [ ] [Staircase Climbing Combinations](algo/staircase-climbing-combinations/README.md) — scaffolded, not yet attempted
+- [ ] [Neighborhood Theft](algo/neighborhood-theft/README.md) — scaffolded, not yet attempted
+- [ ] [Minimum Coins for Change](algo/coin-change/README.md) — scaffolded, not yet attempted
+- [ ] [Count Islands in a Grid](algo/grid-count-islands/README.md) — scaffolded, not yet attempted
+- [ ] [Maximum Water Between Walls](algo/maximum-water-between-walls/README.md) — scaffolded, not yet attempted
+- [ ] [Longest Non-repeating Substring](algo/longest-non-repeating-substring/README.md) — scaffolded, not yet attempted
 
 
 ### frontend

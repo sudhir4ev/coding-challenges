@@ -1,0 +1,12 @@
+[
+  { "input": [["coins", [3, 7, 4]], ["target", 14]], "output": 2 },
+  { "input": [["coins", [1]], ["target", 0]], "output": 0 },
+  { "input": [["coins", [2]], ["target", 3]], "output": -1 },
+  { "input": [["coins", [1, 5, 10, 25]], ["target", 30]], "output": 2 },
+  { "input": [["coins", [1, 2, 5]], ["target", 11]], "output": 3 },
+  { "input": [["coins", [1]], ["target", 1]], "output": 1 },
+  { "input": [["coins", [1]], ["target", 100]], "output": 100 },
+  { "input": [["coins", [2, 5, 10]], ["target", 3]], "output": -1 },
+  { "input": [["coins", [186, 419, 83, 408]], ["target", 6249]], "output": 20 },
+  { "input": [["coins", [1, 2, 5]], ["target", 0]], "output": 0 }
+]

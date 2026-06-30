@@ -1,0 +1,13 @@
+[
+  { "input": [["str", "abcdefg"]], "output": 7 },
+  { "input": [["str", "dvdf"]], "output": 3 },
+  { "input": [["str", "aabbccdde"]], "output": 2 },
+  { "input": [["str", ""]], "output": 0 },
+  { "input": [["str", "a"]], "output": 1 },
+  { "input": [["str", "aa"]], "output": 1 },
+  { "input": [["str", "abcabcbb"]], "output": 3 },
+  { "input": [["str", "bbbbb"]], "output": 1 },
+  { "input": [["str", "pwwkew"]], "output": 3 },
+  { "input": [["str", "abcdeabcde"]], "output": 5 },
+  { "input": [["str", "tmmzuxt"]], "output": 5 }
+]

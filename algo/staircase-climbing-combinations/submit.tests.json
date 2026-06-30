@@ -1,0 +1,11 @@
+[
+  { "input": [["steps", 1]], "output": 1 },
+  { "input": [["steps", 2]], "output": 2 },
+  { "input": [["steps", 3]], "output": 3 },
+  { "input": [["steps", 4]], "output": 5 },
+  { "input": [["steps", 5]], "output": 8 },
+  { "input": [["steps", 6]], "output": 13 },
+  { "input": [["steps", 10]], "output": 89 },
+  { "input": [["steps", 20]], "output": 10946 },
+  { "input": [["steps", 45]], "output": 1836311903 }
+]

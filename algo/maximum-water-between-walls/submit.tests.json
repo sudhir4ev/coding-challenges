@@ -1,0 +1,12 @@
+[
+  { "input": [["walls", [1, 4, 2, 3]]], "output": 6 },
+  { "input": [["walls", [1, 1]]], "output": 1 },
+  { "input": [["walls", [1, 0]]], "output": 0 },
+  { "input": [["walls", [4, 3, 2, 1, 4]]], "output": 16 },
+  { "input": [["walls", [1, 2, 1]]], "output": 2 },
+  { "input": [["walls", [1, 8, 6, 2, 5, 4, 8, 3, 7]]], "output": 49 },
+  { "input": [["walls", [0, 0]]], "output": 0 },
+  { "input": [["walls", [10000, 10000]]], "output": 10000 },
+  { "input": [["walls", [2, 3, 4, 5, 18, 17, 6]]], "output": 17 },
+  { "input": [["walls", [1, 2, 4, 3]]], "output": 4 }
+]
