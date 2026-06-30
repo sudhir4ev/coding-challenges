@@ -41,6 +41,7 @@ See `ui-react/README.md` for exercise details.
 - [x] [Smallest Element in Rotated Sorted Array](algo/array-smallest-in-rotated/README.md)
 - [ ] [Binary Search Tree Kth Smallest Element](algo/binary-search-tree-kth-smallest/README.md)
 - [ ] [Binary Search Tree Lowest Common Ancestor](algo/binary-search-tree-lowest-common-ancestor/README.md)
+- [ ] [Validate Binary Search Tree](algo/binary-search-tree-validate/README.md)
 
 
 ### frontend
