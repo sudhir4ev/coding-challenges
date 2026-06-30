@@ -15,7 +15,7 @@ export default function kthSmallestElementInABst(
 }
 
 function inOrderBSTWalker(root: TreeNode | null, result: number[], k: number) {
-  if (root == null) return result;
+  if (root == null || result.length == k) return result;
   inOrderBSTWalker(root.left, result, k);
   if (result.length == k) return result;
   else result.push(root.val);
