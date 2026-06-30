@@ -10,17 +10,25 @@ export default function kthSmallestElementInABst(
   /**
    * traverse left side of the tree until no more leafs,
    */
-  const results = inOrderBSTWalker(root, [], k);
-  return results.pop();
-}
+  let countSmallestFound = 0;
+  let kthSmallest: number | undefined = undefined;
 
-function inOrderBSTWalker(root: TreeNode | null, result: number[], k: number) {
-  if (root == null || result.length == k) return result;
-  inOrderBSTWalker(root.left, result, k);
-  if (result.length == k) return result;
-  else result.push(root.val);
-  inOrderBSTWalker(root.right, result, k);
-  return result;
+  function inOrderBSTWalker(root: TreeNode | null) {
+    if (root == null || countSmallestFound == k) return;
+
+    inOrderBSTWalker(root.left);
+
+    countSmallestFound++;
+    if (countSmallestFound == k) {
+      kthSmallest = root.val;
+      return;
+    }
+
+    inOrderBSTWalker(root.right);
+  }
+
+  inOrderBSTWalker(root);
+  return kthSmallest;
 }
 
 export class TreeNode {
