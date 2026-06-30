@@ -1,4 +1,4 @@
-import { longestConsecutive } from './solution.js';
+import { longestConsecutive } from './longest-consecutive-sequence';
 
 describe('longestConsecutive', () => {
   it('returns 4 for the basic unsorted example', () => {
