@@ -31,14 +31,18 @@ See `ui-react/README.md` for exercise details.
 ### algo
 
 - [x] [Two Sum](algo/example-two-sum/README.md)
-- [x] [128. Longest Consecutive Sequence](algo/128-longest-consecutive-sequence/README.md)
-- [x] [Blacklisted IPs](algo/blacklisted-ips/README.md)
 - [x] [Maximum Sum in Contiguous Array](algo/array-maximum-sum-contiguous/README.md)
-- [x] [Most Common Elements](algo/array-most-common-elements/README.md)
-- [x] [Array Product Excluding Current](algo/array-product-excluding-current/README.md)
 - [x] [End of Array Reachable](algo/array-reachable-end/README.md)
 - [x] [Find Element in Rotated Array](algo/array-rotated-find/README.md)
-- [ ] [Smallest Element in Rotated Sorted Array](algo/array-smallest-in-rotated/README.md)
+- [x] [Smallest Element in Rotated Sorted Array](algo/array-smallest-in-rotated/README.md)
+- [x] [Binary Search Tree Kth Smallest Element](algo/binary-search-tree-kth-smallest/README.md)
+- [x] [Blacklisted IPs](algo/blacklisted-ips/README.md)
+- [x] [Most Common Elements](algo/array-most-common-elements/README.md) — solution not optimal (used sort O(n log n); required O(n) bucket sort)
+- [⚠️] [128. Longest Consecutive Sequence](algo/128-longest-consecutive-sequence/README.md) — **constraint violated**: problem requires O(n); solution uses sort O(n log n)
+- [⚠️] [Array Product Excluding Current](algo/array-product-excluding-current/README.md) — **constraint violated**: division is prohibited; solution uses division
+- [ ] [Binary Search Tree Lowest Common Ancestor](algo/binary-search-tree-lowest-common-ancestor/README.md) — scaffolded, not yet attempted
+- [ ] [Validate Binary Search Tree](algo/binary-search-tree-validate/README.md) — scaffolded, not yet attempted
+
 
 ### frontend
 
