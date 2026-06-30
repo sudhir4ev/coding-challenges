@@ -66,10 +66,32 @@ See `ui-react/README.md` for exercise details.
 
 - [ ] [Todo App](ui-react/README.md)
 
+## Time tracking
+
+Each challenge is timed using git commit timestamps.
+
+**Workflow:**
+
+```bash
+# 1. When you're ready to start solving (after reading the problem):
+npm run start-challenge -- <challenge-name>
+
+# 2. Solve the problem, run tests until passing.
+
+# 3. When done — stages your changes and commits with elapsed time:
+npm run done-challenge -- <challenge-name>
+
+# 4. View time report across all challenges:
+npm run times
+```
+
+**Convention:** `start:` commits are empty timestamp markers. `impl:` commits contain the actual solution. Time is calculated as the diff between the two.
+
+> Note: always run `start-challenge` *after* reading the problem and *before* writing any code. This gives an accurate measure of pure solving time.
+
 ## Adding a challenge
 
-1. Create a folder under `challenges/`, e.g. `challenges/your-challenge-name/`
-2. Add `solution.js` (export your function(s))
-3. Add `solution.test.js` (Jest tests)
-
-Use `challenges/example-two-sum/` as a template.
+1. Create a folder under `algo/` or `frontend/`, e.g. `algo/your-challenge-name/`
+2. Add a `README.md` with the problem statement (tag with `` `#Medium` `` etc.)
+3. Add your solution file and test file
+4. Use `algo/example-two-sum/` as a template.
