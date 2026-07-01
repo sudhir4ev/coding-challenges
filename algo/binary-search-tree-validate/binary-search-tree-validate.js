@@ -17,29 +17,17 @@ export default function binarySearchTreeValidate(root) {
   function bstChecker(root, lmin, lmax) {
     if (!root) return;
 
-    if (root.left) {
-      if (
-        root.left.val >= root.val ||
-        (lmin != null && root.left.val <= lmin) ||
-        (lmax != null && root.left.val >= lmax)
-      ) {
-        isValid = false;
-        return;
-      }
-      bstChecker(root.left, lmin, root.val);
+    if (
+      (lmin != null && root.val <= lmin) ||
+      (lmax != null && root.val >= lmax)
+    ) {
+      isValid = false;
+      return;
     }
 
-    if (root.right) {
-      if (
-        root.right.val <= root.val ||
-        (lmin != null && root.right.val <= lmin) ||
-        (lmax != null && root.right.val >= lmax)
-      ) {
-        isValid = false;
-        return;
-      }
-      bstChecker(root.right, root.val, lmax);
-    }
+    bstChecker(root.left, lmin, root.val);
+
+    bstChecker(root.right, root.val, lmax);
   }
 
   bstChecker(root, null, null);
