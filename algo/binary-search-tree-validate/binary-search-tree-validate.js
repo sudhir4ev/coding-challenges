@@ -4,16 +4,7 @@
  */
 export default function binarySearchTreeValidate(root) {
   let isValid = true;
-
-  /**
- *    10
-     /  \
-    5    15
-        /  \
-       6    20
-      /  \
-     3    7
- */
+  
   function bstChecker(root, lmin, lmax) {
     if (!root) return;
 
