@@ -36,7 +36,11 @@ export default function BSTLowestCommonAncestor(
       return;
     }
 
-    if (root.val == min.val || root.val == max.val) {
+    if (
+      root.val == min.val ||
+      root.val == max.val ||
+      (root.val > min.val && root.val < max.val)
+    ) {
       lca = root;
       return;
     }
