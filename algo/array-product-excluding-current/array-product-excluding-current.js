@@ -3,6 +3,7 @@
  * @return {number[]}
  */
 export default function arrayProductExcludingCurrent(numbers) {
+  // Special case: `> 1` zeros
   if (numbers.filter((num) => num === 0).length > 1) {
     return new Array(numbers.length).fill(0);
   }
