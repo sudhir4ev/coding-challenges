@@ -4,7 +4,6 @@
  */
 export default function arrayProductExcludingCurrent(numbers) {
   const zeroIndex = [];
-  
   numbers.forEach((num, index) => {
     if (num == 0) {
       zeroIndex.push(index);
@@ -16,7 +15,6 @@ export default function arrayProductExcludingCurrent(numbers) {
     return new Array(numbers.length).fill(0);
   } else if (zeroIndex.length == 1) {
     const arr = new Array(numbers.length).fill(0);
-
     const index = zeroIndex[0];
     // add all index with 0's index set to 1
     numbers.splice(index, 1, 1);
@@ -43,15 +41,13 @@ export default function arrayProductExcludingCurrent(numbers) {
 
     result[index] = arrayMult(0, index - 1) * arrayMult(index + 1);
   }
-
   return result;
 
   function arrayMult(start, end) {
-
     let product = 1;
     end = end ?? numbers.length - 1;
 
-    for (let i = start; i <= end; i++) {
+    for (let i = end; i >= start; i--) {
       product *= numbers[i];
     }
     return product;
