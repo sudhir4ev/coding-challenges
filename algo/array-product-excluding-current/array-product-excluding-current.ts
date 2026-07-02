@@ -2,15 +2,15 @@
  * @param {number[]} numbers
  * @return {number[]}
  */
-export default function arrayProductExcludingCurrent(numbers) {
+export default function arrayProductExcludingCurrent(numbers: number[]) {
   // Special case: `> 1` zeros
   if (numbers.filter((num) => num === 0).length > 1) {
     return new Array(numbers.length).fill(0);
   }
 
-  const result = [];
-  const fwdMul = [];
-  const revMul = [];
+  const result:number[] = [];
+  const fwdMul:number[] = [];
+  const revMul:number[] = [];
 
   for (let i = 0; i < numbers.length; i++) {
     fwdMul[i] = (fwdMul[i - 1] ?? 1) * numbers[i];
