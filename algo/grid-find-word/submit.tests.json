@@ -1,0 +1,42 @@
+[
+  {
+    "input": [["board", [["y", "r", "o"], ["d", "p", "p"], ["p", "q", "q"], ["e", "o", "a"], ["j", "y", "c"]]], ["word", "d"]],
+    "output": true
+  },
+  {
+    "input": [["board", [["u", "g", "x", "r", "q", "g"], ["y", "z", "j", "e", "y", "d"], ["r", "d", "n", "k", "s", "w"], ["w", "a", "t", "c", "d", "z"]]], ["word", "qyeknt"]],
+    "output": true
+  },
+  {
+    "input": [["board", [["p", "e", "z", "s", "a"], ["q", "o", "p", "f", "f"], ["w", "t", "y", "b", "n"], ["d", "k", "u", "f", "y"], ["q", "c", "j", "j", "y"], ["k", "i", "c", "p", "z"]]], ["word", "bfyyz"]],
+    "output": true
+  },
+  {
+    "input": [["board", [["a", "f", "e", "d", "a", "c"], ["c", "c", "d", "b", "f", "e"], ["c", "c", "a", "d", "f", "a"], ["c", "b", "f", "e", "d", "b"], ["b", "a", "c", "a", "d", "a"], ["f", "c", "b", "a", "a", "d"]]], ["word", "b"]],
+    "output": true
+  },
+  {
+    "input": [["board", [["e", "c", "c", "c", "e", "e"], ["f", "a", "e", "e", "f", "b"], ["f", "e", "b", "e", "d", "a"], ["e", "e", "e", "d", "a", "e"], ["f", "a", "c", "a", "e", "d"], ["a", "d", "b", "a", "d", "a"]]], ["word", "f"]],
+    "output": true
+  },
+  {
+    "input": [["board", [["h"]]], ["word", "jyc"]],
+    "output": false
+  },
+  {
+    "input": [["board", [["l"]]], ["word", "wif"]],
+    "output": false
+  },
+  {
+    "input": [["board", [["p"]]], ["word", "pbqcwdf"]],
+    "output": false
+  },
+  {
+    "input": [["board", [["b", "a"]]], ["word", "ushahp"]],
+    "output": false
+  },
+  {
+    "input": [["board", [["m"]]], ["word", "cuvmxbjohdoxgft"]],
+    "output": false
+  }
+]

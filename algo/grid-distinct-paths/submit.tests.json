@@ -1,0 +1,11 @@
+[
+  { "input": [["m", 4], ["n", 1]], "output": 1 },
+  { "input": [["m", 7], ["n", 1]], "output": 1 },
+  { "input": [["m", 1], ["n", 8]], "output": 1 },
+  { "input": [["m", 1], ["n", 9]], "output": 1 },
+  { "input": [["m", 1], ["n", 7]], "output": 1 },
+  { "input": [["m", 2], ["n", 5]], "output": 5 },
+  { "input": [["m", 4], ["n", 6]], "output": 56 },
+  { "input": [["m", 9], ["n", 3]], "output": 45 },
+  { "input": [["m", 6], ["n", 8]], "output": 792 }
+]

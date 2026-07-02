@@ -38,8 +38,8 @@ See `ui-react/README.md` for exercise details.
 - [x] [Binary Search Tree Kth Smallest Element](algo/binary-search-tree-kth-smallest/README.md)
 - [x] [Blacklisted IPs](algo/blacklisted-ips/README.md)
 - [x] [Most Common Elements](algo/array-most-common-elements/README.md) — solution not optimal (used sort O(n log n); required O(n) bucket sort)
-- [⚠️] [128. Longest Consecutive Sequence](algo/128-longest-consecutive-sequence/README.md) — **constraint violated**: problem requires O(n); solution uses sort O(n log n)
-- [⚠️] [Array Product Excluding Current](algo/array-product-excluding-current/README.md) — **constraint violated**: division is prohibited; solution uses division
+- [x] [128. Longest Consecutive Sequence](algo/128-longest-consecutive-sequence/README.md)
+- [x] [Array Product Excluding Current](algo/array-product-excluding-current/README.md)
 - [ ] [Binary Search Tree Lowest Common Ancestor](algo/binary-search-tree-lowest-common-ancestor/README.md) — scaffolded, not yet attempted
 - [ ] [Validate Binary Search Tree](algo/binary-search-tree-validate/README.md) — scaffolded, not yet attempted
 - [ ] [Staircase Climbing Combinations](algo/staircase-climbing-combinations/README.md) — scaffolded, not yet attempted
@@ -48,6 +48,30 @@ See `ui-react/README.md` for exercise details.
 - [ ] [Count Islands in a Grid](algo/grid-count-islands/README.md) — scaffolded, not yet attempted
 - [ ] [Maximum Water Between Walls](algo/maximum-water-between-walls/README.md) — scaffolded, not yet attempted
 - [ ] [Longest Non-repeating Substring](algo/longest-non-repeating-substring/README.md) — scaffolded, not yet attempted
+- [ ] [Binary Tree Equal](algo/binary-tree-equal/README.md) — scaffolded, not yet attempted
+- [ ] [Flip Binary Tree](algo/binary-tree-flip/README.md) — scaffolded, not yet attempted
+- [ ] [Binary Tree Level Order Traversal](algo/binary-tree-level-order-traversal/README.md) — scaffolded, not yet attempted
+- [ ] [Binary Tree Maximum Depth](algo/binary-tree-maximum-depth/README.md) — scaffolded, not yet attempted
+- [ ] [Binary Tree Maximum Total Path](algo/binary-tree-maximum-total-path/README.md) — scaffolded, not yet attempted
+- [ ] [Binary Tree Rebuilding from Preorder and Inorder Traversals](algo/binary-tree-rebuilding-from-traversals/README.md) — scaffolded, not yet attempted
+- [ ] [Binary Tree Serialization and Deserialization](algo/binary-tree-serialization-deserialization/README.md) — scaffolded, not yet attempted
+- [ ] [Binary Tree Subtree](algo/binary-tree-subtree/README.md) — scaffolded, not yet attempted
+- [ ] [Bit Counting](algo/bit-counting/README.md) — scaffolded, not yet attempted
+- [ ] [Bit Reversal](algo/bit-reversal/README.md) — scaffolded, not yet attempted
+- [ ] [Combinations for Target Sum](algo/combinations-target-sum/README.md) — scaffolded, not yet attempted
+- [ ] [Course Dependency](algo/course-dependency/README.md) — scaffolded, not yet attempted
+- [ ] [Graph Clone](algo/graph-clone/README.md) — scaffolded, not yet attempted
+- [ ] [Graph Count Connected Components](algo/graph-count-connected-components/README.md) — scaffolded, not yet attempted
+- [ ] [Is the Graph a Tree](algo/graph-is-tree/README.md) — scaffolded, not yet attempted
+- [ ] [Extraterrestrial Language](algo/extraterrestrial-language/README.md) — scaffolded, not yet attempted
+- [ ] [Disjoint Intervals](algo/disjoint-intervals/README.md) — scaffolded, not yet attempted
+- [ ] [Distinct Paths in Grid](algo/grid-distinct-paths/README.md) — scaffolded, not yet attempted
+- [ ] [Find Word in Grid](algo/grid-find-word/README.md) — scaffolded, not yet attempted
+- [ ] [Find Words in Grid](algo/grid-find-words/README.md) — scaffolded, not yet attempted
+- [ ] [Merge Overlapping Intervals](algo/intervals-combine-overlapping/README.md) — scaffolded, not yet attempted
+- [ ] [Meeting Calendar](algo/intervals-meeting-calendar/README.md) — scaffolded, not yet attempted
+- [ ] [Merge New Interval](algo/intervals-merge-new/README.md) — scaffolded, not yet attempted
+- [ ] [Minimum Meeting Rooms Needed](algo/intervals-minimum-meeting-rooms/README.md) — scaffolded, not yet attempted
 
 
 ### frontend

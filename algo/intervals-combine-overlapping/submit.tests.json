@@ -1,0 +1,12 @@
+[
+  { "input": [["intervals", [[1, 5]]]], "output": [[1, 5]] },
+  { "input": [["intervals", [[9, 9]]]], "output": [[9, 9]] },
+  { "input": [["intervals", [[7, 7], [2, 6]]]], "output": [[2, 6], [7, 7]] },
+  { "input": [["intervals", [[4, 6], [1, 1]]]], "output": [[1, 1], [4, 6]] },
+  { "input": [["intervals", [[4130, 6675]]]], "output": [[4130, 6675]] },
+  { "input": [["intervals", [[3918, 5594]]]], "output": [[3918, 5594]] },
+  { "input": [["intervals", [[5, 9], [9, 9], [8, 8]]]], "output": [[5, 9]] },
+  { "input": [["intervals", [[9, 9], [7, 8], [7, 10]]]], "output": [[7, 10]] },
+  { "input": [["intervals", [[10, 10], [2, 9], [7, 7]]]], "output": [[2, 9], [10, 10]] },
+  { "input": [["intervals", [[2, 2], [3, 8], [4, 7], [1, 5], [7, 9]]]], "output": [[1, 9]] }
+]
