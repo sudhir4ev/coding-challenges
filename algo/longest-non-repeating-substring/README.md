@@ -1,6 +1,6 @@
 # Longest Non-repeating Substring
 
-`#Medium` `#45mins` `#SlidingWindow`
+`#Medium` `#45mins`
 
 Given a string `str`, determine the length of the longest substring that does not contain any repeating characters.
 

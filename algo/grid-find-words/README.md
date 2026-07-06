@@ -1,6 +1,6 @@
 # Find Words in Grid
 
-`#Hard` `#40mins` `#Grids` `#Backtracking` `#Trie`
+`#Hard` `#40mins`
 
 Given a grid of characters `grid` with dimensions `m x n` and a list of strings, `words`, find all the words present on the grid.
 

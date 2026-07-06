@@ -1,6 +1,6 @@
 # Disjoint Intervals
 
-`#Medium` `#45mins` `#Intervals` `#Greedy` `#Sorting`
+`#Medium` `#45mins`
 
 Given an array of `intervals` where each interval is represented as `[start, end]`. Each pair denotes the start and end of an interval on a number line. For example, `[1, 3]` represents an interval that starts at 1 and ends at 3.
 

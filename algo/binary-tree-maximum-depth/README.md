@@ -1,6 +1,6 @@
 # Binary Tree Maximum Depth
 
-`#Easy` `#20mins` `#Trees` `#DepthFirstSearch`
+`#Easy` `#20mins`
 
 Given the `root` of a binary tree, determine the depth of the tree, which is defined as the number of nodes along the longest path from the root to the most distant leaf node.
 

@@ -1,6 +1,6 @@
 # Minimum Coins for Change
 
-`#Medium` `#40mins` `#DynamicProgramming`
+`#Medium` `#40mins`
 
 Given an integer array `coins` indicating different coin denominations and an integer `target` denoting a total sum of money, return the minimum number of coins needed to make up the `target`. If it's not possible to make up the `target` with any combination of the coins, return `-1`.
 

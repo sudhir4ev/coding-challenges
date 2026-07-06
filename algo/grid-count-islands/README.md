@@ -1,6 +1,6 @@
 # Count Islands in a Grid
 
-`#Medium` `#35mins` `#Graphs` `#DepthFirstSearch`
+`#Medium` `#35mins`
 
 Given a two-dimensional binary grid `grid` displaying a map where `1`s signify land and `0`s signify water, determine the number of distinct islands.
 

@@ -1,6 +1,6 @@
 # Binary Tree Serialization and Deserialization
 
-`#Hard` `#20mins` `#Trees` `#DepthFirstSearch` `#BreadthFirstSearch`
+`#Hard` `#20mins`
 
 Design a method to serialize and deserialize a binary tree. There are no specific constraints on how the serialization and deserialization should be implemented; the key requirement is that the serialized binary tree must be convertible back into the original tree structure.
 

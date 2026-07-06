@@ -1,6 +1,6 @@
 # Is the Graph a Tree
 
-`#Medium` `#15mins` `#Graphs` `#DepthFirstSearch` `#UnionFind`
+`#Medium` `#15mins`
 
 Consider a graph with `num` nodes, labeled from `0` to `num - 1`. Given `num` and a list of edges where each `edges[i] = [a, b]` represents an undirected connection between nodes `a` and `b`, determine whether the provided edges form a valid tree.
 

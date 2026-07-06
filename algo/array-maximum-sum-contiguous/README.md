@@ -1,6 +1,6 @@
 # Maximum Sum in Contiguous Array
 
-`Medium` `#25mins`
+`#Medium` `#25mins`
 
 Given an array of integers `numbers`, determine the subarray that has the highest sum and return that sum.
 

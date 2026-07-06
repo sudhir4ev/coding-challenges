@@ -1,6 +1,6 @@
 # Binary Tree Subtree
 
-`#Easy` `#35mins` `#Trees` `#DepthFirstSearch`
+`#Easy` `#35mins`
 
 Given the roots of two binary trees, `root` and `subRoot`, determine whether `subRoot` is a subtree of `root`. The function should return `true` if there exists a subtree within `root` that has the same structure and node values as `subRoot`. If no such subtree exists, return `false`.
 

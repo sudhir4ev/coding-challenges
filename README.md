@@ -136,6 +136,6 @@ Tracker: [DSA Practice Tracker on Notion](https://app.notion.com/p/38fff9bcae348
 ## Adding a challenge
 
 1. Create a folder under `algo/` or `frontend/`, e.g. `algo/your-challenge-name/`
-2. Add a `README.md` with the problem statement (tag with `` `#Medium` `` etc.)
+2. Add a `README.md` with the problem statement (optional difficulty/time tags on line 3, e.g. `` `#Medium` `` `` `#45mins` `` — no algorithm/topic tags)
 3. Add your solution file and test file
 4. Use `algo/example-two-sum/` as a template.

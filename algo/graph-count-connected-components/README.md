@@ -1,6 +1,6 @@
 # Graph Count Connected Components
 
-`#Medium` `#45mins` `#Graphs` `#DepthFirstSearch` `#UnionFind`
+`#Medium` `#45mins`
 
 Consider a graph with `num` nodes, labeled from `0` to `num - 1`. Given `num` and a list of edges where each `edges[i] = [a, b]` represents an undirected connection between nodes `a` and `b`, determine the number of connected components in the graph.
 

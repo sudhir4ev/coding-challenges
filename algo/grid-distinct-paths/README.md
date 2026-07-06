@@ -1,6 +1,6 @@
 # Distinct Paths in Grid
 
-`#Medium` `#35mins` `#Grids` `#DynamicProgramming`
+`#Medium` `#35mins`
 
 A robot is situated on an `m` x `n` grid, starting at the top-left corner (`grid[0][0]`) with the goal of reaching the bottom-right corner (`grid[m - 1][n - 1]`). In one step, the robot can only either move down or right by a single cell.
 

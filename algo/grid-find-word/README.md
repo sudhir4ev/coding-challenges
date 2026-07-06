@@ -1,6 +1,6 @@
 # Find Word in Grid
 
-`#Medium` `#45mins` `#Grids` `#Backtracking`
+`#Medium` `#45mins`
 
 Given a grid of characters with dimensions `m x n`, determine if a specified word can be formed by connecting adjacent characters in the grid.
 

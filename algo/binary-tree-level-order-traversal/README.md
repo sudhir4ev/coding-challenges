@@ -1,6 +1,6 @@
 # Binary Tree Level Order Traversal
 
-`#Medium` `#25mins` `#Trees` `#BreadthFirstSearch`
+`#Medium` `#25mins`
 
 Given the `root` node of a binary tree, return an array of arrays, where each inner array represents the values of nodes at each level of the tree, traversed from left to right.
 

@@ -1,6 +1,6 @@
 # Binary Search Tree Lowest Common Ancestor
 
-`#Medium` `35mins`
+`#Medium` `#35mins`
 
 Given the `root` of a Binary Search Tree (BST), identify the common ancestor (LCA) of two specified nodes within the tree.
 

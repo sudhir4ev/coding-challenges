@@ -1,6 +1,6 @@
 # Minimum Meeting Rooms Needed
 
-`#Medium` `#55mins` `#Intervals` `#Sorting` `#Greedy`
+`#Medium` `#55mins`
 
 Given an array of meeting time `intervals`, where each interval is represented as `[start, end]` which represents a meeting starting at time `start` and ending at time `end`, determine the minimum number of meeting rooms required to accommodate all the meetings without any overlap.
 

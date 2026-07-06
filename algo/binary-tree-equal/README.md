@@ -1,6 +1,6 @@
 # Binary Tree Equal
 
-`#Easy` `#25mins` `#Trees` `#DepthFirstSearch`
+`#Easy` `#25mins`
 
 Given the root nodes of two binary trees, `a` and `b`, determine whether the two trees are equal.
 

@@ -1,6 +1,6 @@
 # Merge New Interval
 
-`#Medium` `#45mins` `#Intervals` `#Sorting`
+`#Medium` `#45mins`
 
 Given a sorted array of non-overlapping intervals `intervals`, where each interval is represented as `[start, end]` and sorted in ascending order by `start` times, insert a new interval `[start, end]` into the array. Ensure the resulting array remains sorted and free of overlapping intervals by merging any overlapping intervals as necessary.
 

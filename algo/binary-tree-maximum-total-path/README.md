@@ -1,6 +1,6 @@
 # Binary Tree Maximum Total Path
 
-`#Hard` `#40mins` `#Trees` `#DepthFirstSearch`
+`#Hard` `#40mins`
 
 Given the `root` of a binary tree, determine the maximum possible sum of any non-empty path within the tree.
 

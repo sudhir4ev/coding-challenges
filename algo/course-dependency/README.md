@@ -1,6 +1,6 @@
 # Course Dependency
 
-`#Medium` `#40mins` `#Graphs` `#TopologicalSort`
+`#Medium` `#40mins`
 
 There are a set of courses numbered from `0` to `courses - 1`. Each course may have prerequisites that dictate the order in which the courses must be taken. These prerequisites are given as a list of pairs, where each pair `[a, b]` indicates that course `b` must be completed before course `a`.
 

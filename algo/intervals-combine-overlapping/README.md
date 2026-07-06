@@ -1,6 +1,6 @@
 # Merge Overlapping Intervals
 
-`#Medium` `#35mins` `#Intervals` `#Sorting`
+`#Medium` `#35mins`
 
 Given an array of `intervals` where each interval is represented as `[start, end]`. Each pair denotes the start and end of an interval on a number line. For example, `[1, 3]` represents an interval that starts at 1 and ends at 3.
 

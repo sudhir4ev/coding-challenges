@@ -1,6 +1,6 @@
 # Flip Binary Tree
 
-`#Easy` `#20mins` `#Trees` `#DepthFirstSearch`
+`#Easy` `#20mins`
 
 Given the `root` node of a binary tree, flip the tree by swapping each node's left and right children, then return the root of the flipped tree.
 

@@ -1,6 +1,6 @@
 # Graph Clone
 
-`#Medium` `#50mins` `#Graphs` `#DepthFirstSearch`
+`#Medium` `#50mins`
 
 Given a reference to a node in a [connected, undirected graph](https://en.wikipedia.org/wiki/Connectivity_(graph_theory)), create and return a deep copy of that cloned graph node.
 

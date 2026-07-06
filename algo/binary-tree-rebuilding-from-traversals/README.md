@@ -1,6 +1,6 @@
 # Binary Tree Rebuilding from Preorder and Inorder Traversals
 
-`#Medium` `#45mins` `#Trees` `#DepthFirstSearch`
+`#Medium` `#45mins`
 
 Given two arrays of integers, `preorder` and `inorder`, where `preorder` represents the values of a preorder traversal of a binary tree, and `inorder` represents the values of an inorder traversal of the same tree, construct and return the binary tree from these traversals.
 

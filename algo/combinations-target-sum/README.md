@@ -1,6 +1,6 @@
 # Combinations for Target Sum
 
-`#Medium` `#40mins` `#DynamicProgramming` `#Backtracking`
+`#Medium` `#40mins`
 
 Given a list of unique integers `numbers` and an integer `target`, find the number of different combinations of elements from `numbers` that sum up to target.
 

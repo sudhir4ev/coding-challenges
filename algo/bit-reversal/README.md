@@ -1,6 +1,6 @@
 # Bit Reversal
 
-`#Easy` `#25mins` `#Bitwise`
+`#Easy` `#25mins`
 
 Implement a function that reverses the bit order of a given 32-bit unsigned integer and returns its corresponding decimal representation.
 

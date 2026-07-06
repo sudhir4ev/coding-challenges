@@ -1,6 +1,6 @@
 # Meeting Calendar
 
-`#Easy` `#35mins` `#Intervals` `#Sorting`
+`#Easy` `#35mins`
 
 Given an array of meeting time intervals where each element represents a meeting time as `[start, end]`, determine whether a person can attend all the meetings without any overlap between meeting times.
 

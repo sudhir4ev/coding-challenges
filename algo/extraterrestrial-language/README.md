@@ -1,6 +1,6 @@
 # Extraterrestrial Language
 
-`#Hard` `#55mins` `#Graphs` `#TopologicalSort`
+`#Hard` `#55mins`
 
 An extraterrestrial language uses the English alphabet, but the letter order is unknown. A list of strings `words` is provided, which represents words from the extraterrestrial language's dictionary, and it is claimed that these words are sorted according to the new language's [lexicographical order](https://en.wikipedia.org/wiki/Lexicographic_order).
 
