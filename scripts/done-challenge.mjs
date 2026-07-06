@@ -44,11 +44,13 @@ try {
 const msg = `impl: ${name}`;
 execSync(`git commit -m "${msg}"`, { cwd, stdio: 'inherit' });
 
-if (startTime) {
-  const elapsedMs = Date.now() - startTime.getTime();
-  const mins = Math.round(elapsedMs / 60000);
+const elapsedMin = startTime
+  ? Math.round((Date.now() - startTime.getTime()) / 60000)
+  : null;
+
+if (elapsedMin != null) {
   console.log(`\n✅ Done: ${name}`);
-  console.log(`⏱  Time taken: ${mins} mins\n`);
+  console.log(`⏱  Time taken: ${elapsedMin} mins\n`);
 } else {
   console.log(`\n✅ Done: ${name}`);
   console.log(`⚠️  No matching "start: ${name}" commit found — time not calculated.\n`);

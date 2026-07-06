@@ -119,6 +119,20 @@ npm run times
 
 > Note: always run `start-challenge` *after* reading the problem and *before* writing any code. This gives an accurate measure of pure solving time.
 
+## Practice automation (Cursor Agent)
+
+The **DSA Practice Coach** runs as a Cursor Automation and agent skill — not npm scripts.
+
+- Skill: `.cursor/skills/dsa-practice-coach/SKILL.md`
+- Setup: [automation/PREREQUISITES.md](automation/PREREQUISITES.md)
+- Config: `cp automation/coach-config.example.json automation/coach-config.json`
+
+In chat: *"Run DSA practice coach"* for evidence-based recommendations (Easy/Medium/Hard).
+
+The agent reads GitHub commits, your solution code, and Notion performance logs. Scheduled runs also create Google Calendar reminders when practice goes stale.
+
+Tracker: [DSA Practice Tracker on Notion](https://app.notion.com/p/38fff9bcae34814bb5ecdba660efdc0b)
+
 ## Adding a challenge
 
 1. Create a folder under `algo/` or `frontend/`, e.g. `algo/your-challenge-name/`

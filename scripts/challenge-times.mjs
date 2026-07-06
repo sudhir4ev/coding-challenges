@@ -13,7 +13,6 @@
  *
  * Usage:
  *   node scripts/challenge-times.mjs
- *   node scripts/challenge-times.mjs --update-notion   (future: patch Notion DB)
  */
 
 import { execSync } from 'child_process';

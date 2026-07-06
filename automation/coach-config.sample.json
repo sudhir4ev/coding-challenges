@@ -1,0 +1,27 @@
+{
+  "notion": {
+    "databaseId": "fc3065b4-8e18-4022-bf58-da19c25d5239",
+    "dataSourceUrl": "collection://fc3065b4-8e18-4022-bf58-da19c25d5239",
+    "trackerPageUrl": "https://app.notion.com/p/38fff9bcae34814bb5ecdba660efdc0b"
+  },
+  "reminder": {
+    "inactiveDays": 3,
+    "eventDurationMinutes": 60,
+    "reminderMinutesBefore": 15,
+    "skipIfEventExistsWithinDays": 2,
+    "calendarEventTitle": "🧠 DSA Practice Session"
+  },
+  "recommendation": {
+    "count": 3,
+    "difficultyMix": "1 Easy, 1 Medium, 1 Hard — judge difficulty from problem content, not README tags"
+  },
+  "projects": [
+    {
+      "name": "coding-challenges",
+      "github": "sudhir4ev/coding-challenges",
+      "branch": "main",
+      "role": "dsa"
+    }
+  ],
+  "activityWindowDays": 30
+}
