@@ -13,6 +13,7 @@ npm install
 - All tests: `npm test`
 - Watch mode: `npm run test:watch`
 - Single challenge: `npm test -- challenges/example-two-sum`
+- SQL challenges only: `npm test -- sql/`
 - React (Vitest): `npm run test:ui-react`
 
 ## UI exercises
@@ -73,6 +74,33 @@ See `ui-react/README.md` for exercise details.
 - [ ] [Merge New Interval](algo/intervals-merge-new/README.md) — scaffolded, not yet attempted
 - [ ] [Minimum Meeting Rooms Needed](algo/intervals-minimum-meeting-rooms/README.md) — scaffolded, not yet attempted
 
+
+### sql
+
+Uses Node 22's built-in `node:sqlite` — no extra dependencies.
+
+Each challenge has a `.sql` file (write your query here) and a `.test.js` harness that runs it against a seeded in-memory SQLite database.
+
+**Run a single challenge:**
+```bash
+npm test -- sql/evooq-wealth/01
+```
+
+**Manual querying (persistent local DB):**
+```bash
+npm run sql:init-db          # creates sql/evooq-wealth/local.db
+sqlite3 sql/evooq-wealth/local.db
+```
+
+#### evooq-wealth — Wealth Platform Schema (L2 Support prep)
+
+Schema: `clients → portfolios → holdings + transactions`, `model_portfolios`, `eod_batch_log`
+
+- [ ] [01 Drift Comparison](sql/evooq-wealth/01-drift-comparison.sql) — actual vs target allocation, HAVING on computed %, window filter to latest val_date
+- [ ] [02 RM AUM Rollup](sql/evooq-wealth/02-rm-rollup.sql) — multi-table aggregation, must use latest snapshot to avoid double-counting
+- [ ] [03 Notify Impacted Portfolios](sql/evooq-wealth/03-notify-impacted.sql) — find all portfolios + RMs affected by a model portfolio change
+- [ ] [04 Latest Holdings per Portfolio](sql/evooq-wealth/04-window-latest-per-group.sql) — ROW_NUMBER() window function, latest-per-group pattern
+- [ ] [05 Failed EOD Jobs (Most Recent Batch)](sql/evooq-wealth/05-anomaly-detection.sql) — derive MAX(batch_date) dynamically, filter to latest batch only
 
 ### frontend
 

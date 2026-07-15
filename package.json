@@ -10,7 +10,8 @@
     "test:ui": "npm run test --prefix ui-react",
     "times": "node scripts/challenge-times.mjs",
     "start-challenge": "node scripts/start-challenge.mjs",
-    "done-challenge": "node scripts/done-challenge.mjs"
+    "done-challenge": "node scripts/done-challenge.mjs",
+    "sql:init-db": "node sql/evooq-wealth/init-local-db.js"
   },
   "keywords": [],
   "author": "",
