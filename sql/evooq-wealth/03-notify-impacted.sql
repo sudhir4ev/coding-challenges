@@ -12,4 +12,8 @@
 -- Expected: p2 (Bob, rm1), p4 (David, rm2), p5 (Eve, rm2 — INACTIVE client)
 -- Note: include ALL portfolios on the model regardless of client status.
 
-SELECT 1; -- replace this with your query
+WITH client_portfolios as (
+    SELECT client_id from portfolios WHERE model_portfolio_id = "m2"
+) 
+SELECT c.client_id, c.rm_id FROM clients c 
+JOIN client_portfolios cp WHERE c.client_id = cp.client_id
