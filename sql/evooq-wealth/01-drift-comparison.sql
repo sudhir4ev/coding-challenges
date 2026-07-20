@@ -18,4 +18,9 @@
 -- Expected: p1(EQUITY +10), p3(EQUITY -20, BOND +20), p4(EQUITY +20, BOND -20)
 -- p2 must NOT appear — it is exactly on-target.
 
+SELECT 
+    holding_id, portfolio_id, max_val_date as MAX(val_date)
+    GROUP BY holding_id, portfolio_id
+from holdings
+
 SELECT 1; -- replace this with your query
